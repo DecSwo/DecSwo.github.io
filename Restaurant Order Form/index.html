@@ -6,10 +6,10 @@
 
 
     <!-- Set the title of your site here -->
-    <title> HTML Forms </title>
+    <title> Restaurant Order Form </title>
 
 
-    <meta name="author" content="mrmrs">
+    <meta name="dps6085" content="mrmrs">
     <meta name="description" content="Common HTML patterns">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,18 +20,16 @@
 
 <body>
 <style>
-   .main{
-       display: flex;
-       text-align: center;
-       align-items: center;
-       justify-content: center;
-   }
+    .main{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
 
 
 </style>
 <div class="container-fluid main">
-
-
 
 
     <form method="post">
@@ -55,9 +53,7 @@
                 <input type="text" aria-label="Password" class="form-control">
             </div>
 
-
             <br>
-
 
             <label>Type of Sandwich:</label>
             <input type="radio" name="type" value="burger">
@@ -65,9 +61,7 @@
             <input type="radio" name="type" value="sub">
             <label>Sub</label>
 
-
             <br><br>
-
 
             <label>Bread:</label>
             <input type="radio" name="bread" value="white">
@@ -77,9 +71,7 @@
             <input type="radio" name="bread" value="multigrain">
             <label>Multigrain</label>
 
-
             <br><br>
-
 
             <label for="meat">Meat:</label>
             <select name="meat" id="meat" >
@@ -90,59 +82,49 @@
                 <option value="turkey">Turkey</option>
             </select>
 
-
             <br><br>
 
-
             <label for="cheese">Cheese:</label>
-            <select name="cheese" id="cheese" >
-                <option value="no cheese">None</option>
+
+            <select name="cheese" id="cheese" multiple>
                 <option value="cheddar">Cheddar</option>
                 <option value="swiss">Swiss</option>
                 <option value="gouda">Gouda</option>
                 <option value="mozzarella">Mozzarella</option>
             </select>
 
-
             <br><br>
-
 
             <label>Additional Toppings:</label>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="lettuce" id="defaultCheck1">
+                <input class="form-check-input" type="checkbox" value="lettuce" id="defaultCheck1" style="float: none">
                 <label class="form-check-label" for="defaultCheck1">Lettuce</label>
             </div>
 
-
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="tomato" id="defaultCheck2">
+                <input class="form-check-input" type="checkbox" value="tomato" id="defaultCheck2" style="float: none">
                 <label class="form-check-label" for="defaultCheck2">Tomato</label>
             </div>
 
-
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="onions" id="defaultCheck3">
+                <input class="form-check-input" type="checkbox" value="onions" id="defaultCheck3" style="float: none">
                 <label class="form-check-label" for="defaultCheck3">Onions</label>
             </div>
 
-
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="ketchup" id="defaultCheck4">
+                <input class="form-check-input" type="checkbox" value="ketchup" id="defaultCheck4" style="float: none">
                 <label class="form-check-label" for="defaultCheck3">Ketchup</label>
             </div>
 
-
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="mustard" id="defaultCheck5">
+                <input class="form-check-input" type="checkbox" value="mustard" id="defaultCheck5" style="float: none">
                 <label class="form-check-label" for="defaultCheck3">Mustard</label>
             </div>
 
-
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="mayonnaise" id="defaultCheck6">
+                <input class="form-check-input" type="checkbox" value="mayonnaise" id="defaultCheck6" style="float: none">
                 <label class="form-check-label" for="defaultCheck3">Mayonnaise</label>
             </div>
-
 
             <br><br>
             <label for="comments">Comments</label>
@@ -155,7 +137,6 @@
             <input class="btn btn-primary" type="submit" name="submit" value="Submit Me">
             <input class="btn btn-secondary" type="reset" name="reset" value="Reset Form">
         </div>
-
 
     </form>
 </div>
