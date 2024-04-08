@@ -1,86 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Declan Swoyer</title>
-    <style>
-        h1 {
-            padding: 12px;
-        }
-        h3 {
-            padding: 10px;
-        h6 {
-            padding: 10px;
-        }
-        p {
-            padding: 10px;
-        }
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+       #timer {
+           font-size: 28px;
+           margin-bottom: 12px;
+       }
+       #startStop {
+           font-size: 20px;
+           padding: 12px;
+       }
+       #summary {
+           font-size: 20px;
+           margin-top: 20px;
+       }
+   </style>
 </head>
 <body>
-
-
-<div class="container-fluid">
-
-    <div class="row">
-        <div class="col-10">
-            <h1 class="border-bottom border-black">Declan Swoyer</h1>
-            <br>
-            <p>
-                <b>Declan Patrick Swoyer</b> (born April 15, 2004) is a full-time student, athlete, and part-time retail service advocate. He is currently pursuing a Bachelor of Science degree from
-                <a href="https://en.wikipedia.org/wiki/Pennsylvania_State_University">The Pennsylvania State University</a> in the IT field. He is majoring in Information Sciences & Technology with a Cybersecurity
-                focus and is minoring in Security & Risk Analysis. Outside his schooling, he is passionate about physical fitness, eating healthy, and maintaining positive mental health so that he can boost the
-                same for others. He has played <a href="https://en.wikipedia.org/wiki/Association_football">soccer</a> for all of his life, eventually playing for both
-                <a href="https://en.wikipedia.org/wiki/Pennsylvania_Interscholastic_Athletic_Association">PIAA</a> and club teams throughout middle and high school. He has also played
-                <a href="https://en.wikipedia.org/wiki/Volleyball">volleyball</a> and <a href="https://en.wikipedia.org/wiki/Volleyball">basketball</a>, though he has been most passionate about
-                weightlifting and powerlifting since 2023.
-            </p>
-            <h3 class="border-bottom border-secondary">Early Life</h3>
-            <p>
-                Swoyer was born in <a href="https://en.wikipedia.org/wiki/Reading,_Pennsylvania">Reading, Pennsylvania</a> to parents of predominantly western-european origin. His mother, Bridget Heckman (1981-), is an elementary and
-                middle school mathematics teacher at <a href="https://en.wikipedia.org/wiki/Oley_Valley_School_District">Oley Valley School District</a>. His father, Travis Swoyer (1979-), is a
-                chef and employee at <a href="https://berkscareer.com/">Berks Career and Technology Center</a>. Declan grew up in Mt. Penn, a small borough in Berks County, PA. He attended <a href="https://en.wikipedia.org/wiki/Antietam_School_District">Antietam School District</a> for K-12 schooling,
-                where he was involved in extracurricular activities and athletics. He has always been passionate about video games as his favorite entertainment source, with
-                <a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda">The Legend of Zelda</a> series being his favorite of all time. The Playstation 2-4 and Nintendo Wii & DS were his favorite
-                gaming consoles, up until he built his own desktop PC in 2019 and has primarily gamed on it since. He graduated from Antietam Middle Senior High School as his class's Salutatorian in 2022, attending Penn State Berks
-                in the following fall.
-            </p>
-            <h3 class="border-bottom border-secondary">Career</h3>
-            <h6><b>General contractor</b></h6>
-            <p>
-                Swoyer started his first official job as a home renovation/general contractor for Kehl Haus Inc., a local Berks County business.
-                He learned extensive hands-on skills in the home renovation field, learned time management skills, and was able to speak with clients
-                about their specific needs in order to tailor their experience towards the best direction possible.
-            </p>
-            <h6><b>Sales associate</b></h6>
-            <p>
-                Swoyer currently works part-time for the Target Corporation as a front-of-store sales associate. His primary duties include delivering
-                Drive-Up orders and fulfilling guest service needs; though his secondary duties include cashiering, collecting carts, and collecting trash when needed. He has
-                learned extensive social interaction and especially time management skills. He has been with the company for 1.5 years.
-            </p>
-        </div>
-        <div class="col-2 bg-light text-dark border border-secondary-subtle">
-            <h5 style="text-align: center"><b>Declan Swoyer</b></h5>
-            <img src="Wiki%20IMG.jpeg" class="img-thumbnail" alt="Declan Swoyer">
-            <p style="text-align: center">Declan in Feb 2024</p>
-            <br>
-            <p style="text-align: left"><b>Born</b>&emsp;&emsp;&emsp;&emsp;&emsp;Declan Patrick Swoyer&#10;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                April 15, 2004 (age 19)&#10;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                <a href="https://en.wikipedia.org/wiki/Reading,_Pennsylvania">Reading, Pennsylvania</a></p>
-            <p style="text-align: left"><b>Alma mater</b>&emsp;<a href="https://en.wikipedia.org/wiki/Antietam_School_District">Antietam School District</a>
-                &#10;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="https://en.wikipedia.org/wiki/Pennsylvania_State_University">Penn State University</a></p>
-            <p style="text-align: left"><b>Occupations</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;IT Student&#10;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                Sales Associate&#10;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-        </div>
-
-
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="text-center">
+        <div id="timer" class="mb-3">0 seconds</div>
+        <button id="startStop" class="btn btn-primary btn-lg" onclick="toggleTimer()">Start</button>
+        <button id="showChart" class="btn btn-danger btn-lg" onclick="displayChart()">Display Results</button>
+        <div id="attemptsSummary" class="mt-4"></div>
+        <div id="overallSummary" class="mt-4"></div>
+        <canvas id="chart" width="400" height="200" class="mt-4"></canvas>
+      </div>
     </div>
-
-
+  </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+   // target time constant (editable)
+   const TARGET_TIME = 3;
+
+   let startTime, endTime;
+   let attempts = [];
+   let myChart;
+
+   function toggleTimer() {
+       let button = document.getElementById("startStop");
+       if (button.textContent === "Start") {
+           startTimer();
+       } else {
+           stopTimer();
+       }
+   }
+
+   function startTimer() {
+       startTime = new Date().getTime();
+       document.getElementById("startStop").textContent = "Stop Timer";
+   }
+
+   function stopTimer() {
+       endTime = new Date().getTime();
+       let elapsedTime = (endTime - startTime) / 1000;
+       let roundedTime = elapsedTime.toFixed(3);
+       document.getElementById("timer").textContent = elapsedTime.toFixed(3) + " seconds";
+       document.getElementById("startStop").textContent = "Start";
+
+       // Display color based on time result
+       let indicationColor;
+       if (Math.abs(elapsedTime - TARGET_TIME) <= 0.05) {
+           indicationColor = "green";
+       } else if (Math.abs(elapsedTime - TARGET_TIME) <= 0.2) {
+           indicationColor = "blue";
+       } else if (Math.abs(elapsedTime - TARGET_TIME) <= 0.5) {
+           indicationColor = "yellow";
+       } else {
+           indicationColor = "red";
+       }
+       document.body.style.backgroundColor = indicationColor;
+
+       // Save attempt metrics
+       attempts.push({
+           attemptNumber: attempts.length + 1,
+           startTime: new Date(startTime).toLocaleTimeString(),
+           stopTime: new Date(endTime).toLocaleTimeString(),
+           elapsedTime: elapsedTime.toFixed(3)
+       });
+
+       if (myChart) {
+           updateAttemptsSummary();
+           updateOverallSummary();
+           updateChart();
+       }
+   }
+
+   function displayChart() {
+       updateAttemptsSummary();
+       updateOverallSummary();
+       updateChart();
+   }
+
+   function updateAttemptsSummary() {
+       let summary = "<h4>Attempts Summary:</h4>";
+       summary += "<ul class='list-group'>";
+       attempts.forEach(function(attempt) {
+           summary += "<li class='list-group-item'>Attempt #" + attempt.attemptNumber + ": Started at " + attempt.startTime + ", stopped at " + attempt.stopTime + ", Elapsed Time: " + attempt.elapsedTime + " seconds</li>";
+       });
+       summary += "</ul>";
+       document.getElementById("attemptsSummary").innerHTML = summary;
+   }
+
+   function updateOverallSummary() {
+       let totalAttempts = attempts.length;
+       let totalElapsedTime = attempts.reduce((sum, attempt) => sum + parseFloat(attempt.elapsedTime), 0);
+       let minTime = Math.min(...attempts.map(attempt => parseFloat(attempt.elapsedTime)));
+       let maxTime = Math.max(...attempts.map(attempt => parseFloat(attempt.elapsedTime)));
+       let avgTime = (totalElapsedTime / totalAttempts).toFixed(3);
+
+       let summary = "<h4>Overall Summary:</h4>";
+       summary += "<p>Total Attempts: " + totalAttempts + "</p>";
+       summary += "<p>Minimum Time: " + minTime.toFixed(3) + " seconds</p>";
+       summary += "<p>Maximum Time: " + maxTime.toFixed(3) + " seconds</p>";
+       summary += "<p>Average Time: " + avgTime + " seconds</p>";
+
+       document.getElementById("overallSummary").innerHTML = summary;
+   }
+
+   function updateChart() {
+       let labels = [];
+       let data = [];
+       attempts.forEach(function(attempt) {
+           labels.push("Attempt #" + attempt.attemptNumber);
+           data.push(parseFloat(attempt.elapsedTime));
+       });
+
+       if (myChart) {
+           // Update chart data
+           myChart.data.labels = labels;
+           myChart.data.datasets[0].data = data;
+           myChart.update();
+       } else {
+           var ctx = document.getElementById('chart').getContext('2d');
+           myChart = new Chart(ctx, {
+               type: 'bar',
+               data: {
+                   labels: labels,
+                   datasets: [{
+                       label: 'Elapsed Time (seconds)',
+                       data: data,
+                       backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                       borderColor: 'rgba(54, 162, 235, 1)',
+                       borderWidth: 1
+                   }]
+               },
+               options: {
+                   scales: {
+                       y: {
+                           beginAtZero: true
+                       }
+                   }
+               }
+           });
+       }
+   }
+</script>
 </body>
-
-
 </html>
