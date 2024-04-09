@@ -1,1 +1,1 @@
-Declan Swoyer, Wikipedia Self Bio Assignment, 2/12/2024, https://decswo.github.io/
+Declan Swoyer, 3 Second Assignment, 4/8/2024, https://decswo.github.io/
