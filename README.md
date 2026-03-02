@@ -1,4 +1,4 @@
-Declan Swoyer, IST 256 Final Project, 4/15/2024, https://decswo.github.io/
+Declan Swoyer, IST 256 Final Project, 4/15/2024, [https://decswo.github.io/](https://decswo.github.io/IST%20256%20Final%20Project/2121_wave_cafe/index.html)
 
 Original Template: https://www.free-css.com/free-css-templates/page290/wave-cafe
 
